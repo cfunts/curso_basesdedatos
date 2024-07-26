@@ -13,7 +13,7 @@
 1. Crear el Modelo Relacional de la base de datos del sistema. OK
 1. Identificar los tipos de datos de los atributos de las entidades del sistema. OK
 1. identificar los atributos que puedan ser únicos en el sistema. OK
-1. identificar las reglas de negocio (Operaciones CRUD) del sistema.
+1. identificar las reglas de negocio (Operaciones CRUD) del sistema. OK
 
 ## Glosario
 
