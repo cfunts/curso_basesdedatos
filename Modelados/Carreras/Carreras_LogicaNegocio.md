@@ -4,44 +4,42 @@
 
 ### carreras **(ED)**
 
-- id_carrera **(PK)** INT AUTO **UNIQUE**
-- nombre VARCHAR(50)
-- tipo_carrera **(FK)** INT
-- fecha DATE
-- tiempo VARCHAR(10)
-- mejor_tiempo BOOLEAN
-- altitud INT
-- lugar VARCHAR(50)
-- pais **(FK)** INT
-- foto VARCHAR(255)
+- carrera_id **(PK)**
+- nombre
+- tipo_carrera **(FK)**
+- fecha
+- tiempo
+- mejor_tiempo
+- altitud
+- lugar
+- pais **(FK)**
+- foto
 
 ### tipos_carreras **(EC)**
 
-- id_tipo_carrera **(PK)** INT AUTO **UNIQUE**
-- descripcion TEXT
-- distancia **(UQ)** FLOAT 
+- tipo_carrera_id **(PK)**
+- descripcion
+- distancia **(UQ)**
 
-### países **(EC)**
+### paises **(EC)**
 
-- id_pais **(PK)** INT AUTO **UNIQUE**
-- nombre VARCHAR(50)
+- pais_id **(PK)**
+- nombre
 
+## Relaciones
 
-## Relaciones entre entidades
-
-1. Una **carrera** _pertenece_ a un **tipo de carrera**. (_1 a 1_)
-1. Una **carrera** se _corre_ a un **país**. (_1 a 1_)
-
+1. Una **carrera** _pertenece_ a un **tipo de carrera** (_1 a M_).
+1. Una **carrera** se _corre_ en un **país** (_1 a M_).
 
 ## Diagramas
 
-### Modelo Entidad - Relación
+### Modelo Entidad - Reación
 
-![Modelo Entidad - Relación](./CarrerasModeloE-R.png)
+![Modelo Entidad - Reación](./Carreras_ModeloE-R.png)
 
-### Modelo Entidad - Relación
+### Modelo Relacional de la BD
 
-![Modelo Relacional de la Base de Datos](./ModeloRelacionalBBDD.png)
+![Modelo Relacional de la BD](./Carreras_ModeloRelacionalBD.png)
 
 ## Reglas de Negocio
 
@@ -55,7 +53,7 @@
 
 ### tipos_carreras
 
-1. Todos los valores del atributo distancia, deberán estar expresados en km y no se podrán repetir.
+1. Todos los valores del atributo distancia, deberán estar expresados en _km_ y no se podrán repetir.
 1. Crear el registro de un tipo de carrera
 1. Leer el registro de un(os) tipo(s) de carrera(s) dada una condición en particular.
 1. Leer todos los registros de la entidad tipos carreras.
